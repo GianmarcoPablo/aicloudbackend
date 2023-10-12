@@ -26,7 +26,7 @@ app.use("/api/blogs", blogsRoutes)
 app.use("/api/pedidos", pedidosRoutes)
 
 
-app.listen(process.env.PUERTO, () => {
-    console.log(`Servidor corriendo en el puerto ${process.env.PUERTO}`);
+app.listen(4000, () => {
+    console.log(`Servidor corriendo en el puerto ${4000}`);
 })
 
