@@ -3,7 +3,6 @@ import Pedidos from "../model/Pedidos.js"
 const nuevoPedido = async (req, res) => {
     try {
         await Pedidos.create(req.body)
-
     } catch (error) {
         console.log(error);
     }

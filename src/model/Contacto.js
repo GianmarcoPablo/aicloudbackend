@@ -1,8 +1,7 @@
 import { Sequelize } from "sequelize"
 import db from "../config/db.js"
 
-
-const Usuario = db.define('usuarios', {
+const Contacto = db.define('contactos', {
     // Identificador del usuario
     id: {
         type: Sequelize.INTEGER,
@@ -14,25 +13,32 @@ const Usuario = db.define('usuarios', {
         type: Sequelize.STRING,
         allowNull: false
     },
+    // Nombre del usuario
+    apellido: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    empresa: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     // Correo electrónico del usuario
     email: {
         type: Sequelize.STRING,
-        unique: true,
         allowNull: false
     },
     // Contraseña del usuario
-    password: {
+    telefono: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    rol: {
-        type: Sequelize.ENUM('user', 'admin'),
-        defaultValue: 'user'
+    mensaje: {
+        type: Sequelize.STRING,
+        allowNull: false
     }
-}); 
+});
 
-Usuario.sync();
+Contacto.sync()
 
-
-export default Usuario
+export default Contacto
 

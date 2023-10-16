@@ -31,7 +31,8 @@ const login = async (req, res) => {
             id: usuario.id,
             nombre: usuario.nombre,
             email: usuario.email,
-            token: generarJWT(usuario.id)
+            token: generarJWT(usuario.id),
+            rol: usuario.rol
         })
     } else {
         return res.status(401).json({ msg: "Contraseña incorrecta" });

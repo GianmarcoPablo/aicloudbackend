@@ -5,6 +5,7 @@ import usuariosRoutes from "./routes/usuario.routes.js"
 import productosRoutes from "./routes/productos.routes.js"
 import blogsRoutes from "./routes/blogs.routes.js"
 import pedidosRoutes from "./routes/pedidos.routes.js"
+import contactoRoutes from "./routes/contacto.routes.js"
 import cors from "cors"
 
 const app = express()
@@ -24,6 +25,7 @@ app.use("/api/usuarios", usuariosRoutes)
 app.use("/api/productos", productosRoutes)
 app.use("/api/blogs", blogsRoutes)
 app.use("/api/pedidos", pedidosRoutes)
+app.use("/api/contactos", contactoRoutes)
 
 
 app.listen(4000, () => {
